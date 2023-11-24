@@ -1,7 +1,7 @@
-from django.db import models
+from enum import Enum
 
 
-class Color(models.TextChoices):  # Colors for cars
+class Color(Enum):  # Colors for cars
     RED = 'Red'
     BLUE = 'Blue'
     GREEN = 'Green'
@@ -10,10 +10,3 @@ class Color(models.TextChoices):  # Colors for cars
     BLACK = 'Black'
     SILVER = 'Silver'
     GRAY = 'Gray'
-
-
-class UserProfile(models.TextChoices):  # User Type
-    NONE = "none"
-    CLIENT = "client"
-    CAR_DEALER = "car_dealer"
-    SUPPLIER = "supplier"
